@@ -140,7 +140,23 @@ cursor: url(http://www.rw-designer.com/cursor-view/91846.png), default
     color: #6666ff;
   }
 }
+
+	::-webkit-scrollbar {
+	width: 20px;
+	height: 7px;
+	background-color:#ffffff;
+	}
+	::-webkit-scrollbar-button:start:decrement,
+	::-webkit-scrollbar-button:end:increment {display: block;}
+	::-webkit-scrollbar-button:vertical:start:increment,
+	::-webkit-scrollbar-button:vertical:end:decrement {display: none;}
+	::-webkit-scrollbar-button:end:increment 
+        {background-image:url(https://www.snazzyspace.com/images/arrowdown.png);
+	background-repeat: no-repeat;background-position:center;
+        -webkit-box-shadow: inset 0 0 16px rgba(214,214,214,0.9);}
     </style>
+    
+    
 <script type="text/javascript">
 // <![CDATA[
 var sparks=75; // how many sparks per clicksplosion
@@ -320,6 +336,8 @@ function set_scroll() {
     + fix glitter trail not working!!!!! <br>
     + figure out how to fix spacing between different types of text <br>
     + finish & link other pages
+    <br>
+    + fix scrollbar 
   </ul>
  <img src="https://web.archive.org/web/20090806130823if_/http://www.geocities.com/blueboard_99/links.gif" alt="links"width="650" height="45">
   <br>
@@ -330,6 +348,7 @@ function set_scroll() {
   <br>
   <br> 
   <br>
-    </center>   
+    </center>
+    
   </body>
 </html>
