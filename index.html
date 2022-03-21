@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head>    
 <title>PJ'Z WEBBED SITE</title>
   <meta charset="utf-8">
   <meta name="description" content="a place for me things">
@@ -86,7 +86,41 @@ font-size: 20
 /* CLASS */ 
 .lhover {
 cursor: url(http://www.rw-designer.com/cursor-view/91846.png), default 
-        }  
+        }
+  #shadowBox {
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Black w/opacity/see-through */
+  border: 3px solid;
+}
+
+.rainbow {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 75px;
+  font-family: mpixtool;
+  letter-spacing: 5px;
+  animation: colorRotate .5s linear 0s infinite;
+}
+
+@keyframes colorRotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
+}
     </style>
 <script type="text/javascript">
 // <![CDATA[
@@ -244,8 +278,8 @@ function set_scroll() {
   </head>
   <body style="background-color: ;">
 <center>
-  
-    <h1>=hello=</h1>
+ 
+<h2 class="rainbow">hello </h2>
 <h2> <em>and...</em> </h2>
 <a href="https://cdc.gov">
   <img src="https://64.media.tumblr.com/dd86ec051142eb2115b87417d43424cc/tumblr_p7pgr1DteG1vpf6ddo1_400.gifv" alt="spinning earth" class="lhover">
@@ -263,7 +297,7 @@ function set_scroll() {
 <img src="https://web.archive.org/web/20090806130823if_/http://www.geocities.com/blueboard_99/links.gif" alt="links"width="650" height="45">
   <br> <br>
    <a href="https://help.flourish.studio/article/288-how-to-use-custom-html-and-css#useful-css-properties" target="_blank"><span class="lhover"> why is my cursor not clicjing on this wgat gte fcuk </span></a>
-  <br> <br>     
+  <br> <br>
     </center>   
   </body>
 </html>
