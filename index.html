@@ -4,7 +4,6 @@
 <title>PJ'Z WEBBED SITE</title>
  <link rel="shortcut icon" href="http://sstatic.net/so/favicon.ico"> 
 <link rel="apple-touch-icon" href="http://sstatic.net/so/apple-touch-icon.png"> 
->
   <meta charset="utf-8">
   <meta name="description" content="a place for me things">
     <meta name="author" content="pj">
@@ -154,15 +153,13 @@ cursor: url(http://www.rw-designer.com/cursor-view/91846.png), default
         {background-image:url(https://www.snazzyspace.com/images/arrowdown.png);
 	background-repeat: no-repeat;background-position:center;
         -webkit-box-shadow: inset 0 0 16px rgba(214,214,214,0.9);}
-    </style>
-    
-    
+    </style>    
 <script type="text/javascript">
 // <![CDATA[
-var sparks=75; // how many sparks per clicksplosion
-var speed=33; // how fast - smaller is faster
-var bangs=5; // how many can be launched simultaneously (note that using too many can slow the script down)
-var colours=new Array('#03f', '#f03', '#0e0', '#93f', '#0cf', '#f93', '#f0c'); 
+let sparks=75; // how many sparks per clicksplosion
+let speed=33; // how fast - smaller is faster
+let bangs=5; // how many can be launched simultaneously (note that using too many can slow the script down)
+let colours=new Array('#03f', '#f03', '#0e0', '#93f', '#0cf', '#f93', '#f0c'); 
 //                     blue    red     green   purple  cyan    orange  pink
 
 /****************************
@@ -171,21 +168,21 @@ var colours=new Array('#03f', '#f03', '#0e0', '#93f', '#0cf', '#f93', '#f0c');
 *  http://www.mf2fm.com/rv  *
 * DON'T EDIT BELOW THIS BOX *
 ****************************/
-var intensity=new Array();
-var Xpos=new Array();
-var Ypos=new Array();
-var dX=new Array();
-var dY=new Array();
-var stars=new Array();
-var decay=new Array();
-var timers=new Array();
-var swide=800;
-var shigh=600;
-var sleft=sdown=0;
-var count=0;
+let intensity=new Array();
+let Xpos=new Array();
+let Ypos=new Array();
+let dX=new Array();
+let dY=new Array();
+let stars=new Array();
+let decay=new Array();
+let timers=new Array();
+let swide=800;
+let shigh=600;
+let sleft=sdown=0;
+let count=0;
 
 function addLoadEvent(funky) {
-  var oldonload=window.onload;
+  let oldonload=window.onload;
   if (typeof(oldonload)!='function') window.onload=funky;
   else window.onload=function() {
     if (oldonload) oldonload();
@@ -196,7 +193,7 @@ function addLoadEvent(funky) {
 addLoadEvent(clicksplode);
 
 function clicksplode() { if (document.getElementById) {
-  var i, j;
+  let i, j;
   window.onscroll=set_scroll;
   window.onresize=set_width;
   document.onclick=eksplode;
@@ -209,7 +206,7 @@ function clicksplode() { if (document.getElementById) {
 }}
 
 function createDiv(char, size) {
-  var div, sty;
+  let div, sty;
   div=document.createElement('div');
   sty=div.style;
   sty.font=size+'px monospace';
@@ -222,7 +219,7 @@ function createDiv(char, size) {
 }
 
 function bang(N) {
-  var i, Z, A=0;
+  let i, Z, A=0;
   for (i=sparks*N; i<sparks*(N+1); i++) { 
     if (decay[i]) {
       Z=stars[i].style;
@@ -244,7 +241,7 @@ function bang(N) {
 }
 
 function eksplode(e) { 
-  var x, y, i, M, Z, N;
+  let x, y, i, M, Z, N;
   set_scroll();
   y=(e)?e.pageY:event.y+sdown;
   x=(e)?e.pageX:event.x+sleft;
@@ -269,8 +266,8 @@ function eksplode(e) {
 } 
 
 function set_width() {
-  var sw_min=999999;
-  var sh_min=999999;
+  let sw_min=999999;
+  let sh_min=999999;
   if (document.documentElement && document.documentElement.clientWidth) {
     if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
     if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
